@@ -34,7 +34,7 @@ h1{
     font-size: 40px;
     font-weight: 100;
     position: absolute;
-    top: -20px;
+    top: 5px;
     left: 20px;
 }
 
@@ -46,6 +46,7 @@ h2{
     font-family: mulish;
     position: relative;
     top: 30px;
+    margin: 0 2rem;
 }
 
 h3{
@@ -88,8 +89,8 @@ li{
 }
 
 .soy{
-    height: 350px;
-    width: 350px;
+    height: 25rem;
+    width: 25rem;
 }
 
 .flowers{
@@ -146,7 +147,7 @@ button{
     margin: 0;
 }
 .navegacion li{
-    margin: 0 1px;
+    margin: 3rem 1rem;
 }
 
 .navegacion a{
@@ -200,10 +201,10 @@ button{
 
 .textmak{
     display: inline-block;
-    width: 50vw;
-    height: 50vh;
+    width: 40vw;
+    height: 40vh;
     background-color: none;
-    margin: 10px;
+    margin:0 10px;
     grid-area: textmak;
     justify-items: center;
     position: relative;
@@ -220,6 +221,7 @@ button{
     justify-items: center;
     position: relative;
     top: 50px;
+    margin: 0 3rem;
 }
 
 .mainflow{
@@ -237,7 +239,7 @@ button{
 .tflow{
     grid-area: tflow;
     justify-items: start;
-    margin: 0 80px;
+    margin: 0 8rem;
 }
 .imgflow{
     grid-area: imgflow;
@@ -246,17 +248,17 @@ button{
 
 .texflow{
     display: inline-block;
+    justify-items: center;
     width: 75vw;
     height: 5vh;
     background-color: none;
-    margin: 0 160px;
+    margin: 0 10rem;
     grid-area: texflow;
-    justify-items: center;
 }
 
 .tcap{
     grid-area: tcap;
-    margin: 5px 80px;
+    margin: 0 8rem;
 }
 
 .imgcap{
@@ -269,7 +271,7 @@ button{
     width: 75vw;
     height: 10vh;
     background-color: none;
-    margin: 0 160px;
+    margin: 0 10rem;
     grid-area: texcap;
     justify-items: center;
 }
@@ -285,6 +287,7 @@ button{
 
 .tpolaroid{
     grid-area: tpolaroid;
+    margin: 2rem 5rem;
 }
 
 .imggral{
@@ -323,7 +326,7 @@ button{
     justify-items: center;
     color: #f7b95e;
     font-size: 50px;
-    margin: 0 200px;
+    margin: 0 10rem;
     margin-top: 10%;
 }
 
@@ -332,15 +335,15 @@ button{
     justify-items: center;
     width: 30vw;
     height: 7vh;
-    margin: 0 100px;
+    margin: 0 10rem;
 }
 
 .completa{
     grid-area: completa;
     justify-items: center;
     width: 30vw;
-    height: 30vh;
-    margin: 0 100px;
+    height: 15vh;
+    margin: -5rem 10rem;
 }
 
 .contame{
@@ -352,30 +355,32 @@ button{
     justify-items: center;
     color: #9b9998;
     font-size: 50px;
-    margin: 0 200px;
+    margin: 0 5rem;
     margin-top: 10%;
 }
 
 .nombre{
     grid-area: nombre;
     justify-items: center;
-    margin: 10px;
+    margin: 1rem 5rem;
 }
 .email{
     grid-area: email;
     justify-items: center;
-    margin: 10px;
+    margin: 1rem 5rem;
 }
 
 .mensaje{
     grid-area: mensaje;
     justify-items: center;
+    margin: 1rem 5rem;
 }
 
 .boton{
     grid-area: boton;
     justify-items: center;
     margin-top: 20px;
+    margin: 1rem 7rem;
 }
 
 
