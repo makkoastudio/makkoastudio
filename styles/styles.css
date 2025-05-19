@@ -1,0 +1,381 @@
+*{
+    margin: 1;
+    padding: 1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+@font-face {
+    font-family: whitenice;
+    src: url(../font/Whitenice.ttf);
+}
+
+@font-face {
+    font-family: mulish;
+    src: url(../font/Mulish-VariableFont_wght.ttf);
+}
+
+body {
+background-color: #ebe9e4;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.home{
+    color: #333333;
+    font-size: 30px;
+    font-weight: 5000;
+}
+
+h1{
+    color: #f7b95e;
+    font-family: whitenice;
+    font-size: 40px;
+    font-weight: 100;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+}
+
+h2{
+    color: #f7b95e;
+    font-size: 20px;
+    font-weight: 5000;
+    text-transform: uppercase;
+    font-family: mulish;
+    position: relative;
+    top: 30px;
+}
+
+h3{
+    color: #333333;
+    font-size: 35px;
+    font-family: whitenice;
+    font-weight: 100;
+
+}
+
+h4{
+    color: #9b9998;
+    font-family: mulish;
+    font-size: 15px;
+}
+
+li{
+    list-style: none;
+    font-size: 15px;
+    color: #9b9998;
+    font-family: mulish;
+}
+
+.logo{
+    height: 60px;
+    width: 200px;
+    position: absolute;
+    top: 10px;
+}
+
+.gif{
+    height: 40vh;
+    width: 90vw;
+}
+
+.rrss{
+    height: 50px;
+    width: 50px;
+    border-radius: 1000px;
+}
+
+.soy{
+    height: 350px;
+    width: 350px;
+}
+
+.flowers{
+    width: 100%;
+    max-width: 270px;
+}
+
+.capitan{
+    height: 270px;
+    width: 270px;
+}
+
+.capitanilu{
+    height: 270px;
+    width: 270px;
+}
+
+.polaroiduno{ 
+    height: 350px;
+    width: 350px;
+}
+
+.polaroiddos{
+    height: 200px;
+    width: 200px;
+}
+
+
+p{
+    font-size: 15px;
+    font-family: mulish;
+    color: #333333;
+    text-align: justify;
+}
+
+button{
+    font-family: whitenice;
+    font-size: 20px;
+    justify-items: center;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border-color: #f7b95e;
+    background-color: #f7b95e;
+    color: #ebe9e4;
+}
+
+
+.navegacion{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navegacion li{
+    margin: 0 1px;
+}
+
+.navegacion a{
+    color: #9b9998;
+    text-decoration: none;
+    padding: 10px 10px;
+    position: relative;
+    top: 10px;
+}
+
+.gifgif{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carrusel{
+    display: flex;
+    justify-content: center;
+}
+
+.derechos{
+    display: flex;
+    justify-content: left;
+    position: relative;
+    top: 50px;
+}
+
+.redes{
+    display: flex;
+    justify-content: right;
+}
+
+.studio{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "hola hola quees"
+    "hola hola textmak"
+    "hola hola textmak"
+    ;
+}
+
+.quees{
+    grid-area: quees;
+    justify-items: start;
+    position: relative;
+    left: 10px;
+    top: 60px;
+}
+
+.textmak{
+    display: inline-block;
+    width: 50vw;
+    height: 50vh;
+    background-color: none;
+    margin: 10px;
+    grid-area: textmak;
+    justify-items: center;
+    position: relative;
+    top: 50px;
+}
+
+.titulo{
+    grid-area: titulo;
+    justify-items: left;
+}
+
+.hola{
+    grid-area: hola;
+    justify-items: center;
+    position: relative;
+    top: 50px;
+}
+
+.mainflow{
+    display: grid;
+    grid-template-areas: 
+    "tflow tflow tflow"
+    "imgflow imgflow imgflow"
+    "texflow texflow texflow"
+    "tcap tcap tcap"
+    "imgcap imgcap imgcap"
+    "texcap texcap texcap"
+    ;
+    justify-content: space-around;
+}
+.tflow{
+    grid-area: tflow;
+    justify-items: start;
+    margin: 0 80px;
+}
+.imgflow{
+    grid-area: imgflow;
+    justify-items: center;
+}
+
+.texflow{
+    display: inline-block;
+    width: 75vw;
+    height: 5vh;
+    background-color: none;
+    margin: 0 160px;
+    grid-area: texflow;
+    justify-items: center;
+}
+
+.tcap{
+    grid-area: tcap;
+    margin: 5px 80px;
+}
+
+.imgcap{
+    grid-area: imgcap;
+    justify-items: center;
+}
+
+.texcap{
+    display: inline-block;
+    width: 75vw;
+    height: 10vh;
+    background-color: none;
+    margin: 0 160px;
+    grid-area: texcap;
+    justify-items: center;
+}
+
+.mainpolaroid{
+    display: grid;
+    grid-template-areas: 
+    "tpolaroid tpolaroid tpolaroid"
+    "imggral imgpolaroid imgpolaroid"
+    "imggral texpolaroid texpolaroid"
+    ;
+}
+
+.tpolaroid{
+    grid-area: tpolaroid;
+}
+
+.imggral{
+    grid-area: imggral;
+    justify-content: center;
+    margin: 20px 90px;
+}
+
+.imgpolaroid{
+    grid-area: imgpolaroid;
+    justify-content: center;
+    margin: 0 80px;
+}
+
+.texpolaroid{
+    grid-area: texpolaroid;
+    display: inline-block;
+    width: 45vw;
+    height: 1vh;
+    background-color: none;
+    margin: -50px 80px;
+}
+.maincontacto{
+    display: grid;
+    grid-template-areas: 
+    "hablemos contame"
+    "texhableuno nombre"
+    "completa email"
+    "none mensaje"
+    ;
+}
+
+
+.hablemos{
+    grid-area: hablemos;
+    justify-items: center;
+    color: #f7b95e;
+    font-size: 50px;
+    margin: 0 200px;
+    margin-top: 10%;
+}
+
+.texhableuno{
+    grid-area: texhableuno;
+    justify-items: center;
+    width: 30vw;
+    height: 7vh;
+    margin: 0 100px;
+}
+
+.completa{
+    grid-area: completa;
+    justify-items: center;
+    width: 30vw;
+    height: 30vh;
+    margin: 0 100px;
+}
+
+.contame{
+    grid-area: contame;
+    justify-content: center;
+}
+.idea{
+    grid-area: contame;
+    justify-items: center;
+    color: #9b9998;
+    font-size: 50px;
+    margin: 0 200px;
+    margin-top: 10%;
+}
+
+.nombre{
+    grid-area: nombre;
+    justify-items: center;
+    margin: 10px;
+}
+.email{
+    grid-area: email;
+    justify-items: center;
+    margin: 10px;
+}
+
+.mensaje{
+    grid-area: mensaje;
+    justify-items: center;
+}
+
+.boton{
+    grid-area: boton;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+
