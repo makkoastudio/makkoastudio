@@ -9,44 +9,28 @@
     <title>MakkoaStudio - Quienes Somos</title>
 </head>
 <body>
-    <header>
-        <a href="../index.html">
-            <img src="../multimedia/makkoa firma.png" alt="Logo" class="logo">
-        </a>
+    <header class="header">
+        <a href="../index.html"><img src="../multimedia/makkoa firma.png" alt="Logo" class="logo"></a>
         <nav>
-            <ul class="navegacion">
-                <li>
-                    <a href="./quienes-somos.html">Conocé MAKKoa Studio</a>
-                </li>
-                <li>
-                    <a href="./portfolio.html">Portfolio</a>
-                </li>
-                <li>
-                    <a href="./Behind.html">Behind the scene</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
+            <ul class="navegacion" id="menu">
+                <li><a href="./quienes-somos.html">MAKKoa Studio</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./Behind.html">Behind the scene</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <section class="titulo">
-            <article>
-                <h2>Conocé Makkoa Studio</h2>
-            </article>
-        </section>
+        <div class="hamburguesa" id="hamburguesa">&#9776;</div>
     </header>
     <main class="studio">
-        <div class="hola">
-            <img src="../multimedia/quien soy feliz.png" alt="Quien-soy" class="soy">
-        </div>
-        <section class="quees">
-            <article>
-                <h3>¿Qué es Makkoa Studio?</h3>
-            </article>
+        <section class="contenido-principal">
+            <div>
+                <h3 class="titulo-imagen">¿Qué es Makkoa Studio?</h3>
+                <img src="../multimedia/quien soy feliz.png" alt="Quien-soy" class="soy">
+            </div>
+            <div class="right-column">
+                <p class="textmak">Makkoa Studio es un espacio creativo donde se fusionan el diseño gráfico, el diseño arquitectónico y la creación digital. Nacimos con la idea de transformar ideas en experiencias visuales con identidad, cuidando tanto lo estético como lo funcional. Desde ilustraciones hechas a mano hasta renders arquitectónicos intervenidos artísticamente, pasando por contenido vidual para redes y piezas digitales pensadas para conectar, en Makkoa combinamos creatividad, técnica y estrategia. Creemos en el poder del diseño para contar historias, emocionar y comunicar con intención. Ya sea en un papel, una pantalla o una fachada, buscamos generar un impacto auténtico y duradero a través de cada proyecto.</p>
+            </div>
         </section>
-        <div class="textmak">
-            <p>Makkoa Studio es un espacio creativo donde se fusionan el diseño gráfico, el diseño arquitectónico y la creación digital. Nacimos con la idea de transformar ideas en experiencias visuales con identidad, cuidando tanto lo estético como lo funcional. Desde ilustraciones hechas a mano hasta renders arquitectónicos intervenidos artísticamente, pasando por contenido vidual para redes y piezas digitales pensadas para conectar, en Makkoa combinamos creatividad, técnica y estrategia. Creemos en el poder del diseño para contar historias, emocionar y comunicar con intención. Ya sea en un papel, una pantalla o una fachada, buscamos generar un impacto auténtico y duradero a través de cada proyecto.</p>
-        </div>
     </main>
 
     <footer>
@@ -54,10 +38,18 @@
             <h4>Derechos Reservados</h4>
         </div>
         <div class="redes">
-            <img src="../multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss">
-            <img src="../multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss">
-            <img src="../multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss">
+            <a href="https://www.instagram.com/mak.koa/" target="_blank"><img src="../multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss"></a>
+            <a href="http://www.behance.net/makdg" target="_blank"><img src="../multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss"></a>
+            <a><img src="../multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss"></a>
         </div>
     </footer>
+
+            <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    hamburguesa.addEventListener("click", () => {
+        menu.classList.toggle("activo");
+    });</script>
 </body>
 </html>

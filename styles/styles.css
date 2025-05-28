@@ -1,6 +1,7 @@
 *{
-    margin: 1;
-    padding: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
@@ -25,7 +26,7 @@ font-family: Arial, Helvetica, sans-serif;
 .home{
     color: #333333;
     font-size: 30px;
-    font-weight: 5000;
+    font-weight: 500;
 }
 
 h1{
@@ -33,9 +34,12 @@ h1{
     font-family: whitenice;
     font-size: 40px;
     font-weight: 100;
-    position: absolute;
-    top: 5px;
-    left: 20px;
+    margin-left: 20px;
+}
+.logo-texto{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 h2{
@@ -72,9 +76,22 @@ li{
 
 .logo{
     height: 60px;
-    width: 200px;
-    position: absolute;
-    top: 10px;
+    width: auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.top-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .gif{
@@ -83,19 +100,28 @@ li{
 }
 
 .rrss{
-    height: 50px;
-    width: 50px;
-    border-radius: 1000px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.rrss:hover{
+    transform: scale(1.1);
 }
 
 .soy{
-    height: 25rem;
-    width: 25rem;
+    height: 20rem;
+    width: 20rem;
 }
 
 .flowers{
     width: 100%;
-    max-width: 270px;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .capitan{
@@ -141,20 +167,21 @@ button{
 
 .navegacion{
     display: flex;
-    justify-content: right;
-    list-style: none;
-    padding: 0;
+    justify-content: flex-end;
+    gap: 5rem;
     margin: 0;
+    padding: 0;
 }
 .navegacion li{
-    margin: 3rem 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .navegacion a{
     color: #9b9998;
     text-decoration: none;
     padding: 10px 10px;
-    position: relative;
+    position: static;
     top: 10px;
 }
 
@@ -165,95 +192,154 @@ button{
 }
 
 .carrusel{
-    display: flex;
-    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: visible;
 }
 
-.derechos{
+footer{
     display: flex;
-    justify-content: left;
-    position: relative;
-    top: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ebe9e4;
+    flex-wrap: wrap;
+}  
+
+.derechos{
+    font-family: mulish;
+    color: #9b9998;
+    font-size: 15px;
+    margin: 0;
 }
 
 .redes{
     display: flex;
-    justify-content: right;
+    gap: 15px;
 }
 
 .studio{
     display: grid;
-    grid-template-areas: 
-    "titulo titulo titulo"
-    "hola hola quees"
-    "hola hola textmak"
-    "hola hola textmak"
-    ;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
 }
 
 .quees{
     grid-area: quees;
-    justify-items: start;
-    position: relative;
-    left: 10px;
-    top: 60px;
+    font-size: 1.2rem;
+    color: #333333;
 }
 
 .textmak{
     display: inline-block;
-    width: 40vw;
-    height: 40vh;
+    width: 30vw;
+    height: 30vh;
     background-color: none;
     margin:0 10px;
     grid-area: textmak;
     justify-items: center;
     position: relative;
     top: 50px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
 }
 
 .titulo{
     grid-area: titulo;
-    justify-items: left;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
 }
 
 .hola{
     grid-area: hola;
-    justify-items: center;
-    position: relative;
-    top: 50px;
-    margin: 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hola img{
+    max-width: 100%;
+    height: auto;
 }
 
 .mainflow{
-    display: grid;
-    grid-template-areas: 
-    "tflow tflow tflow"
-    "imgflow imgflow imgflow"
-    "texflow texflow texflow"
-    "tcap tcap tcap"
-    "imgcap imgcap imgcap"
-    "texcap texcap texcap"
-    ;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
+
+.proyecto{
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.proyecto h3{
+    font-family: whitenice;
+    font-weight: 100;
+    font-size: 2.5rem;
+    color: #f7b95e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.imgcap{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.imgcap img{
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.imgflow{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+
 .tflow{
     grid-area: tflow;
     justify-items: start;
     margin: 0 8rem;
 }
-.imgflow{
-    grid-area: imgflow;
-    justify-items: center;
-}
+
 
 .texflow{
-    display: inline-block;
-    justify-items: center;
-    width: 75vw;
-    height: 5vh;
-    background-color: none;
-    margin: 0 10rem;
-    grid-area: texflow;
+    font-family: mulish;
+    font-size: 1rem;
+    color: #333333;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 .tcap{
@@ -265,15 +351,19 @@ button{
     grid-area: imgcap;
     justify-items: center;
 }
+.imgflow{
+    grid-area: imgflow;
+    justify-items: center;
+}
 
 .texcap{
-    display: inline-block;
-    width: 75vw;
-    height: 10vh;
-    background-color: none;
-    margin: 0 10rem;
-    grid-area: texcap;
-    justify-items: center;
+    font-family: mulish;
+    font-size: 1rem;
+    color: #333333;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 .mainpolaroid{
@@ -383,4 +473,257 @@ button{
     margin: 1rem 7rem;
 }
 
+.hamburguesa{
+    margin-left: auto;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+}
 
+.carrusel-container{
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrusel-slide{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    color: #333333;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    user-select: none;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.prev{
+    left: -110px;
+}
+.next{
+    right: -110px;
+}
+.carrusel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.contenido-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.left-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+}
+
+.left-column, .titulo-imagen{
+    margin: 0;
+}
+.left-column .soy{
+    max-width: 100%;
+    height: auto;
+    display: block;
+} 
+
+.right-column{
+    max-width: 500px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 25px;
+        position: static;
+        margin-left: 10px;
+        top: auto;
+        left: auto;
+    }
+
+    .logo{
+        width: 120px;
+        height: auto;
+        position: static;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .navegacion{
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 1rem 0;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .navegacion li{
+        margin: 1rem 0;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .gif{
+        width: 100%;
+        height: auto;
+    }
+
+    .soy{
+        width: 90vw;
+        height: auto;
+    }
+
+    .mainflow, .mainpolaroid, .maincontacto, .studio{
+        display: block;
+        margin: 0 1rem;
+    }
+
+    .textmak, .texflow, .texcap, .texpolaroid{
+        width: 100% !important;
+        height: auto !important;
+        margin: 1rem 0 !important;
+    }
+
+    button{
+        width: 100%;
+        max-width: 250%;
+    }
+
+    .header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hamburguesa{
+        display: block;
+    }
+
+    .navegacion.activo{
+        display: flex;
+    }
+
+    .carrusel{
+        max-width: 1200px;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px;
+        }
+    
+    .derechos{
+        order: 2;
+        text-align: center;
+    }
+
+    .redes{
+        order: 1;
+        justify-content: center;
+    }
+
+    .rrss{
+        height: 35px;
+        width: 35px;
+    }
+
+    .studio{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "titulo"
+        "hola"
+        "quees"
+        "textmak";
+        gap: 1rem;
+        padding: 2rem 1rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .titulo{
+        font-size: 2rem;
+    }
+
+    .textmak{
+        width: 90vw;
+        height: auto;
+        padding: 1rem;
+        font-size: 0.95rem;
+        top: 0;
+    }
+
+    .quees{
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+
+    .hola img{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .contenido-principal{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .right-column{
+        max-width: 100%;
+    }
+
+    .left-column{
+        max-width: 100%;
+    }
+
+    .imgflow, .imgcap{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .imgflow, .imgcap img{
+        max-width: 90vw;
+    }
+
+    .texflow, .texcap{
+        max-width: 90vw;
+        margin-top: 1rem;
+    }
+
+    .flowers{
+        max-width: 150px;
+    }
+}

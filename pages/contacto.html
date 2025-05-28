@@ -8,43 +8,34 @@
     <title>MakkoaStudio - Contacto</title>
 </head>
 <body>
-    <header>
-        <a href="../index.html">
-            <img src="../multimedia/makkoa firma.png" alt="Logo" class="logo">
-        </a>
+    <header class="header">
+        <a href="../index.html"><img src="../multimedia/makkoa firma.png" alt="Logo" class="logo"></a>
         <nav>
-            <ul class="navegacion nav nav.pilss">
-                <li class="nad-items">
-                    <a class="nav-link"  href="./quienes-somos.html">Conocé MAKKoa Studio</a>
-                </li>
-                <li class="nad-items">
-                    <a class="nav-link"  href="./portfolio.html">Portfolio</a>
-                </li>
-                <li class="nad-items">
-                    <a class="nav-link"  href="./Behind.html">Behind the scene</a>
-                </li>
-                <li class="nad-items">
-                    <a  class="nav-link"  href="./contacto.html">Contacto</a>
-                </li>
+            <ul class="navegacion" id="menu">
+                <li class="nad-items"><a class="nav-link"  href="./quienes-somos.html">MAKKoa Studio</a></li>
+                <li class="nad-items"><a class="nav-link"  href="./portfolio.html">Portfolio</a></li>
+                <li class="nad-items"><a class="nav-link"  href="./Behind.html">Behind the scene</a></li>
+                <li class="nad-items"><a  class="nav-link"  href="./contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <section class="mt-4">
+        <div class="hamburguesa" id="hamburguesa">&#9776;</div>
+    </header>
+
+    <main class="maincontacto">
+        <section>
             <article>
                 <h2>Contacto</h2>
             </article>
         </section>
-    </header>
-
-    <main class="maincontacto container mt-5">
-        <section class="hable mb-4">
+        <section class="hable">
             <article>
                 <h3 class="hablemos">¡Hablemos!</h3>
             </article>
         </section>
-        <div class="texhableuno mb-3">
+        <div class="texhableuno">
             <p>¿Tenés una idea dando vueltas? ¿Te gustaría encargar una ilustración, un diseño o simplemente ver cómo podríamos trabajar juntos?</p>
         </div>
-        <div class="completa mb-4" >
+        <div class="completa" >
             <p>Completá el formulario y me pongo en contacto con vos. También podés escribirme por redes si preferís algo más directo o informal. Estoy abierta a colaboraciones, proyectos creativos y todo lo que se sienta auténtico.</p>
         </div>
         <section class="contame">
@@ -81,10 +72,18 @@
             </article>
         </section>
         <div class="redes">
-                <img src="../multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss">
-                <img src="../multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss">
-                <img src="../multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss">
+                <a href="https://www.instagram.com/mak.koa/" target="_blank"><img src="../multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss"></a>
+                <a href="http://www.behance.net/makdg" target="_blank"><img src="../multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss"></a>
+                <a href=""><img src="../multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss"></a>
         </div>
     </footer>
+
+    <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    hamburguesa.addEventListener("click", () => {
+        menu.classList.toggle("activo");
+    });</script>
 </body>
 </html>
