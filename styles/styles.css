@@ -503,7 +503,7 @@ footer{
     position: absolute;
     top: 50%;
     padding: 12px;
-    color: #333333;
+    color: transparent;
     font-weight: bold;
     font-size: 24px;
     background-color: transparent;
@@ -599,6 +599,11 @@ footer{
 
 
 @media (max-width: 768px) {
+
+main{
+    min-height: calc(100vh - 120px);
+}
+
     h1{
         font-size: 25px;
         position: static;
