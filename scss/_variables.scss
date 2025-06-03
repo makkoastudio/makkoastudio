@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+
+@font-face {
+    font-family: whitenice;
+    src: url(../font/Whitenice.ttf);
+}
+
+@font-face {
+    font-family: mulish;
+    src: url(../font/Mulish-VariableFont_wght.ttf);
+} 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ebe9ea;
+}
+
+
+@mixin mobile{
+    @media (max-width: 425px){
+        @content
+    }
+}
