@@ -19,14 +19,53 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+.home{
+    color: #333333;
+    font-size: 30px;
+    font-weight: 500;
+}
 body{
     background-color: #ebe9ea;
 }
+p{
+    font-size: 15px;
+    font-family: mulish;
+    color: #333333;
+    text-align: justify;
+}
+h2{
+    color: #f7b95e;
+    font-size: 20px;
+    font-weight: 5000;
+    text-transform: uppercase;
+    font-family: mulish;
+    position: relative;
+    top: 30px;
+    margin: 0 2rem;
+}
 
+h3{
+    color: #333333;
+    font-size: 35px;
+    font-family: whitenice;
+    font-weight: 100;
+}
+
+h4{
+    color: #9b9998;
+    font-family: mulish;
+    font-size: 15px;
+}
+
+li{
+    list-style: none;
+    font-size: 15px;
+    color: #9b9998;
+    font-family: mulish;
+}
 
 @mixin mobile{
-    @media (max-width: 425px){
-        @content
+    @media (max-width: 768px){
+        @content;
     }
 }

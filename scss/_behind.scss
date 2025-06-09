@@ -1,0 +1,48 @@
+.mainpolaroid{
+    display: grid;
+    grid-template-areas: 
+    "tpolaroid tpolaroid tpolaroid"
+    "imggral imgpolaroid imgpolaroid"
+    "imggral texpolaroid texpolaroid"
+    ;
+    .tpolaroid{
+        grid-area: tpolaroid;
+        margin: 2rem 5rem;
+    }
+    .imggral{
+        grid-area: imggral;
+        justify-content: center;
+        margin: 20px 90px;
+    }
+    .imgpolaroid{
+        grid-area: imgpolaroid;
+        justify-content: center;
+        margin: 0 80px;
+    }
+    .texpolaroid{
+        grid-area: texpolaroid;
+        display: inline-block;
+        width: 45vw;
+        height: 1vh;
+        background-color: none;
+        margin: -50px 80px;
+    }
+    .polaroiduno{ 
+        height: 350px;
+        width: 350px;
+    }
+    .polaroiddos{
+        height: 200px;
+        width: 200px;
+    }
+    @include mobile{
+        .mainpolaroid{
+            display: block;
+        }
+        .texpolaroid{
+            width: 100% !important;
+            height: auto !important;
+            margin: 1rem o !important;
+        }
+    }
+}

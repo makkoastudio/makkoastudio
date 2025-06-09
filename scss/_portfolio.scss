@@ -1,0 +1,122 @@
+
+.mainflow{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    .proyecto{
+        margin: 4rem auto;
+        max-width: 1200px;
+        padding: 0 1rem;
+    }
+    .proyecto h3{
+        font-family: whitenice;
+        font-weight: 100;
+        font-size: 2.5rem;
+        color: #f7b95e;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .imgcap{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        margin-bottom: 1.5rem;
+    }
+    .imagcap img{
+        width: 100%;
+        max-width: wrap;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    .imgflow{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    .tflow{
+        grid-area: tflow;
+        justify-items: start;
+        margin: 0 8rem;
+    }
+    .texflow{
+        font-family: mulish;
+        font-size: 1rem;
+        color: #333333;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    .tcap{
+        grid-area: tcap;
+        margin: 0 8rem;
+    }
+    .imgcap{
+        grid-area: imgcap;
+        justify-items: center;
+    }
+    .imgflow{
+        grid-area: imgflow;
+        justify-items: center;
+    }
+    .texcap{
+        font-family: mulish;
+        font-size: 1rem;
+        color: #333333;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    .flowers{
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .capitan{
+        height: 270px;
+        width: 270px;
+    }
+    .capitanilu{
+        height: 270px;
+        width: 270px;
+    }
+    @include mobile{
+        main{
+            min-width: calc(100vh - 120px);
+        }
+        .mainflow{
+            display: block;
+            margin: 0 1rem;
+        }
+        .texflow, .texcap{
+            width: 100% !important;
+            height: auto !important;
+            margin: 1rem o !important;
+        }
+        .imgflow, .imgcap{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .imgflow, .imgcap img{
+            max-width: 90vw;
+        }
+        .texflow, .texcap{
+            max-width: 90vw;
+            margin-top: 1rem;
+        }
+        .flowers{
+            max-width: 150px;
+        }
+    }
+}
