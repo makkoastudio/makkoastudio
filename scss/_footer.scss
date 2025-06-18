@@ -27,6 +27,11 @@ footer{
     .rrss:hover{
         transform: scale(1.1);
     }
+    @keyframes zoomInMobile{
+        0%{transform: scale(1);}
+        50%{transform: scale(1.2);}
+        100%{transform: scale(1);}
+    }
     @include mobile{
     flex-direction: column;
     align-items: center;
@@ -42,6 +47,12 @@ footer{
         .rrss{
             height: 30px;
             width: 30px;
+            &:active{
+                transform: scale(1.1);
+            }
+            &.tocado{
+                animation: zoomInMobile 0.3s ease;
+            }
         }
     }
 }

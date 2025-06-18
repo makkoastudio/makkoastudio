@@ -38,6 +38,16 @@
         height: 200px;
         width: 200px;
     }
+    img{
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:active{
+            transform: scale(1.05);
+        }
+    }
     @include mobile{
             display: flex;
             flex-direction: column;

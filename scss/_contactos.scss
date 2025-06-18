@@ -102,6 +102,13 @@
         border-color: #f7b95e;
         background-color: #f7b95e;
         color: #ebe9e4;
+        &:hover{
+            transform: scale(1.05);
+            background-color: #dba847;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
     }
     @include mobile{
         main{
@@ -159,6 +166,11 @@
             padding: 0.75rem 1.5rem;
             font-size: 1.1rem;
             height: auto;
+            transition: transform 0.3s ease, font-size 0.3s ease;
+            &:hover{
+                transform: scale(1.05);
+                font-size: 1.25rem;
+            }
         }
         .columna-derecha, .columna-izquierda{
             width: 100%;

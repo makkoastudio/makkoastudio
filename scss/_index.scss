@@ -2,7 +2,6 @@ main{
     flex-grow: 1;
     padding: 20px;
     min-height: 80vh;
-
     .gifgif{
         display: flex;
         justify-content: center;
@@ -11,8 +10,8 @@ main{
     .gifgif, .gif{
         width: 100%;
         height: auto;
-        max-width: 500px;
-        object-fit: contain;
+        max-width: none;
+        object-fit: cover;
     }
     .carrusel{
         max-width: 1200px;

@@ -66,5 +66,35 @@
     hamburguesa.addEventListener("click", () => {
         menu.classList.toggle("activo");
     });</script>
+        <script>
+    document.querySelectorAll('.navegacion a').forEach(link => {
+        link.addEventListener('touchstart', () => {
+            document.querySelectorAll('.navegacion a').forEach(a => a.classList.remove('activo'));
+            link.classList.add('activo');
+        });
+    });
+</script>
+<script>
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('touchstart', () => {
+        logo.classList.add('activo');
+            setTimeout(() => {
+                logo.classList.remove('activo');
+            }, 300); // duración del zoom
+        });
+    }
+</script>
+<script>
+    const botonesRRSS = document.querySelectorAll('.rrss');
+    botonesRRSS.forEach(boton => {
+        boton.addEventListener('touchstart', () => {
+            boton.classList.add('tocado');
+            setTimeout(() => {
+                boton.classList.remove('tocado');
+            }, 300);
+        });
+    });
+</script>
 </body>
 </html>

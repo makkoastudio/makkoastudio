@@ -106,7 +106,12 @@
         object-fit: cover;
         display: block;
         margin: 0 auto;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
+
     @include mobile{
         main{
             min-width: calc(100vh - 120px);

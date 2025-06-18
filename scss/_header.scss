@@ -17,6 +17,16 @@ header{
     .logo{
         height: 60px;
         width: auto;
+        transition: transform 0.3s ease background-color 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+            background-color: #f7b95e;
+            border-radius: 10px;
+        }
+        &.activo{
+            transform: scale(1.15);
+            background-color: #f7b95e;
+        }
     }
     .navegacion{
         display: flex;
@@ -35,6 +45,20 @@ header{
         padding: 10px 10px;
         position: static;
         top: 10px;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: #f7b95e;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        &.activo,
+        &:active{
+            background-color: #f7b95e;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
     }
 
     .hamburguesa{
@@ -44,6 +68,7 @@ header{
         display: none;
         user-select: none;
     }
+
     @include mobile{
         margin-top: 10px;
         .header{

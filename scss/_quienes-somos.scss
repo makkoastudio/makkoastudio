@@ -31,9 +31,20 @@
         justify-content: center;
         align-items: center;
     }
-    .hola img{
+    .soy{
         max-width: 100%;
         height: auto;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:active{
+            transform: scale(1.05);
+        }
+    }
+    .hola img.activo{
+        transform: scale(1.05);
     }
     .contenido-principal{
         display: flex;
