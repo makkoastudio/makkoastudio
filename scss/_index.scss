@@ -1,12 +1,18 @@
 main{
+    flex-grow: 1;
+    padding: 20px;
+    min-height: 80vh;
+
     .gifgif{
         display: flex;
         justify-content: center;
-        margin-top: 20px;
-        .gif{
-            height: 40vh;
-            width: 90vw;
-        }
+        margin-top: 1rem;
+    }
+    .gifgif, .gif{
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+        object-fit: contain;
     }
     .carrusel{
         max-width: 1200px;
@@ -14,6 +20,7 @@ main{
         margin: auto;
         position: relative;
         overflow: visible;
+        margin-bottom: 80px;
     }
     .carrusel-container{
         position: relative;
@@ -55,9 +62,9 @@ main{
         transition: transform 0.5s ease-in-out;
         width: 100%;
     }
-    @include mobile{
+        @include mobile{
         main{
-            min-height: calc(100vh - 120px);
+            min-height: calc(100vh - 100px);
         }
         .gif{
             width: 100%;
@@ -69,3 +76,4 @@ main{
         
     }
 }
+

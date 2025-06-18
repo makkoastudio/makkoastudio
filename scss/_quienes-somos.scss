@@ -74,13 +74,8 @@
     }
     @include mobile{
         .studio{
-            display: grid;
-            grid-template-columns: 5fr;
-            grid-template-areas:
-            "titulo"
-            "hola"
-            "quees"
-            "testmak";
+            display: flex;
+            flex-direction: column;
             gap: 1rem;
             padding: 2rem 1rem;
             justify-items: center;
@@ -97,13 +92,15 @@
         }
         .titulo{
             font-size: 2rem;
+            margin-bottom: 0 1rem;
         }
         .textmak{
             width: 90vw;
             height: auto;
             padding: 1rem;
             font-size: 0.95rem;
-            top: 0;
+            text-align: center;
+            margin:0.5rem auto 0 auto !important;
         }
         .quees{
             font-size: 1rem;
@@ -116,12 +113,16 @@
         }
         .soy{
             width: 90vw;
+            max-width: 100%;
             height: auto;
+            display: block;
+            margin: 0.5rem auto 0 auto;
         }
         .contenido-principal{
             flex-direction: column;
             align-items: center;
             text-align: center;
+            gap: 50px;
         }
         .right-column{
             max-width: 100%;

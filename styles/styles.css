@@ -14,6 +14,16 @@
   box-sizing: border-box;
 }
 
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
 .home {
   color: #333333;
   font-size: 30px;
@@ -21,7 +31,7 @@
 }
 
 body {
-  background-color: #ebe9ea;
+  background-color: #ebe9ea !important;
 }
 
 p {
@@ -76,7 +86,7 @@ header li {
   color: #9b9998;
   font-family: mulish;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   header li {
     padding: 2px;
   }
@@ -110,7 +120,7 @@ header .hamburguesa {
   display: none;
   user-select: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   header {
     margin-top: 10px;
   }
@@ -162,7 +172,7 @@ header .hamburguesa {
   color: #9b9998;
   font-family: mulish;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .header-index li {
     padding: 2px;
   }
@@ -213,7 +223,7 @@ header .hamburguesa {
   position: static;
   top: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .header-index .header-index {
     flex-direction: row;
     justify-content: space-between;
@@ -323,11 +333,10 @@ header .hamburguesa {
   text-align: center;
   color: #333333;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .studio .studio {
-    display: grid;
-    grid-template-columns: 5fr;
-    grid-template-areas: "titulo" "hola" "quees" "testmak";
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
     padding: 2rem 1rem;
     justify-items: center;
@@ -344,13 +353,15 @@ header .hamburguesa {
   }
   .studio .titulo {
     font-size: 2rem;
+    margin-bottom: 0 1rem;
   }
   .studio .textmak {
     width: 90vw;
     height: auto;
     padding: 1rem;
     font-size: 0.95rem;
-    top: 0;
+    text-align: center;
+    margin: 0.5rem auto 0 auto !important;
   }
   .studio .quees {
     font-size: 1rem;
@@ -363,12 +374,16 @@ header .hamburguesa {
   }
   .studio .soy {
     width: 90vw;
+    max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0.5rem auto 0 auto;
   }
   .studio .contenido-principal {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 50px;
   }
   .studio .right-column {
     max-width: 100%;
@@ -406,7 +421,14 @@ header .hamburguesa {
   justify-items: center;
   margin-bottom: 1.5rem;
 }
-.mainflow .imagcap img {
+.mainflow .imgcap img {
+  width: 100%;
+  max-width: wrap;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.mainflow .imgflow img {
   width: 100%;
   max-width: wrap;
   height: auto;
@@ -415,9 +437,10 @@ header .hamburguesa {
 }
 .mainflow .imgflow {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  margin-bottom: 1.5rem;
   align-items: center;
   padding: 2rem;
 }
@@ -471,32 +494,51 @@ header .hamburguesa {
   height: 270px;
   width: 270px;
 }
-@media (max-width: 768px) {
+.mainflow .flowers, .mainflow .capitan, .mainflow .capitanilu {
+  width: 100%;
+  max-width: 270px;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 430px) {
   .mainflow main {
     min-width: calc(100vh - 120px);
+  }
+  .mainflow .proyecto {
+    margin: 0.5rem auto;
   }
   .mainflow .mainflow {
     display: block;
     margin: 0 1rem;
   }
+  .mainflow .imgflow, .mainflow .imgcap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .mainflow .imgflow img, .mainflow .imgcap img {
+    width: 45%;
+    height: auto;
+    max-width: 90vw;
+  }
   .mainflow .texflow, .mainflow .texcap {
     width: 100% !important;
     height: auto !important;
-    margin: 1rem o !important;
-  }
-  .mainflow .imgflow, .mainflow .imgcap {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  .mainflow .imgflow, .mainflow .imgcap img {
     max-width: 90vw;
+    margin: 1rem auto 0.5rem auto !important;
+    padding-bottom: 0 !important;
+    text-align: justify;
   }
-  .mainflow .texflow, .mainflow .texcap {
-    max-width: 90vw;
-    margin-top: 1rem;
+  .mainflow .texflow {
+    margin-bottom: 0.5rem !important;
   }
-  .mainflow .flowers {
-    max-width: 150px;
+  .mainflow .proyecto h3 {
+    margin-top: 0 !important;
+    text-align: center;
   }
 }
 
@@ -507,6 +549,7 @@ footer {
   padding: 20px 40px;
   background-color: #ebe9e4;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 footer .derechos {
   font-family: mulish;
@@ -525,18 +568,14 @@ footer .rrss {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
-footer .rsss:hover {
+footer .rrss:hover {
   transform: scale(1.1);
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   footer {
-    margin-top: 10px;
-  }
-  footer footer {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding: 20px;
   }
   footer .derechos {
     order: 2;
@@ -547,18 +586,20 @@ footer .rsss:hover {
     justify-content: center;
   }
   footer .rrss {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
   }
 }
 
 .mainpolaroid {
   display: grid;
   grid-template-areas: "tpolaroid tpolaroid tpolaroid" "imggral imgpolaroid imgpolaroid" "imggral texpolaroid texpolaroid";
+  gap: 1rem;
 }
 .mainpolaroid .tpolaroid {
   grid-area: tpolaroid;
   margin: 2rem 5rem;
+  text-align: center;
 }
 .mainpolaroid .imggral {
   grid-area: imggral;
@@ -574,9 +615,10 @@ footer .rsss:hover {
   grid-area: texpolaroid;
   display: inline-block;
   width: 45vw;
-  height: 1vh;
+  height: auto;
   background-color: none;
   margin: -50px 80px;
+  text-align: justify;
 }
 .mainpolaroid .polaroiduno {
   height: 350px;
@@ -586,14 +628,54 @@ footer .rsss:hover {
   height: 200px;
   width: 200px;
 }
-@media (max-width: 768px) {
-  .mainpolaroid .mainpolaroid {
-    display: block;
+@media (max-width: 430px) {
+  .mainpolaroid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+  }
+  .mainpolaroid .tpolaroid {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .mainpolaroid .imggral {
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .mainpolaroid .imggral img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  .mainpolaroid .imgpolaroid {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .mainpolaroid .imgpolaroid img {
+    width: 28%;
+    height: auto;
   }
   .mainpolaroid .texpolaroid {
-    width: 100% !important;
-    height: auto !important;
-    margin: 1rem o !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+    text-align: justify;
+    padding: 0 1rem;
+  }
+  .mainpolaroid .polaroiduno, .mainpolaroid .polaroiddos {
+    width: 100%;
+    max-width: 270px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -632,7 +714,7 @@ footer .rsss:hover {
   margin: 0 5rem;
   margin-top: 10%;
 }
-.maincontacto .fomulario {
+.maincontacto .formulario {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -690,44 +772,90 @@ footer .rsss:hover {
   font-family: whitenice;
   font-size: 20px;
   justify-items: center;
-  height: 30px;
+  height: 50px;
   width: 200px;
   border-radius: 10px;
   border-color: #f7b95e;
   background-color: #f7b95e;
   color: #ebe9e4;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   .maincontacto main {
     min-height: calc(100vh - 120px);
   }
   .maincontacto .maincontacto {
-    display: block;
-    margin: 0 1rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem;
+    padding: 1rem;
+    grid-template-areas: none !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
   }
-  .maincontacto .contacto-container {
+  .maincontacto .hablemos {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+  .maincontacto .texhableuno {
+    text-align: center;
+    max-width: 90%;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  .maincontacto .idea {
+    font-size: 1.5rem;
+    color: #9b9998;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .maincontacto .formulario {
+    display: flex !important;
     flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    gap: 1rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  .maincontacto .formulario input, .maincontacto .formulario textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  .maincontacto .boton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .maincontacto .boton button {
+    width: 100%;
+    max-width: 250px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    height: auto;
   }
   .maincontacto .columna-derecha, .maincontacto .columna-izquierda {
     width: 100%;
   }
-  .maincontacto button {
-    width: 100%;
-    max-width: 250%;
-  }
-  .maincontacto .boton button {
-    width: 100%;
-  }
 }
 
+main {
+  flex-grow: 1;
+  padding: 20px;
+  min-height: 80vh;
+}
 main .gifgif {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1rem;
 }
-main .gifgif .gif {
-  height: 40vh;
-  width: 90vw;
+main .gifgif, main .gif {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: contain;
 }
 main .carrusel {
   max-width: 1200px;
@@ -735,6 +863,7 @@ main .carrusel {
   margin: auto;
   position: relative;
   overflow: visible;
+  margin-bottom: 80px;
 }
 main .carrusel-container {
   position: relative;
@@ -776,9 +905,9 @@ main .carrusel-track {
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   main main {
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 100px);
   }
   main .gif {
     width: 100%;

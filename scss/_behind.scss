@@ -5,9 +5,11 @@
     "imggral imgpolaroid imgpolaroid"
     "imggral texpolaroid texpolaroid"
     ;
+    gap: 1rem;
     .tpolaroid{
         grid-area: tpolaroid;
         margin: 2rem 5rem;
+        text-align: center;
     }
     .imggral{
         grid-area: imggral;
@@ -23,9 +25,10 @@
         grid-area: texpolaroid;
         display: inline-block;
         width: 45vw;
-        height: 1vh;
+        height: auto;
         background-color: none;
         margin: -50px 80px;
+        text-align: justify;
     }
     .polaroiduno{ 
         height: 350px;
@@ -36,13 +39,51 @@
         width: 200px;
     }
     @include mobile{
-        .mainpolaroid{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 1rem;
+        .tpolaroid{
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .imggral{
+            margin: 1rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .imggral img{
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+        }
+        .imgpolaroid{
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .imgpolaroid img{
+            width: 28%;
+            height: auto;
         }
         .texpolaroid{
-            width: 100% !important;
-            height: auto !important;
-            margin: 1rem o !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 1rem 0;
+            text-align: justify;
+            padding: 0 1rem;
+        }
+        .polaroiduno, .polaroiddos{
+            width: 100%;
+            max-width: 270px;
+            margin-bottom: 1rem;
         }
     }
 }
