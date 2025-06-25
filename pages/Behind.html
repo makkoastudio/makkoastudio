@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Behinde the scene en Makkoa Studio: Ilustraciones espontáneas, polaroids dibujadas y momentos creativos que inspiran">
+    <meta name="keywords" content="Makkoa Studio, Behind the scene, ilustración, dibujo, creatividad, polaroids, arte, técnicas mixtas, momentos cotidianos, creatividad libre">
+    <meta name="author" content="Makkoa Studio">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>MakkoaStduio | Behind the scene</title>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><img src="../multimedia/makkoa firma.png" alt="Logo" class="logo"></a>
+        <nav>
+            <ul class="navegacion" id="menu">
+                <li><a href="./quienes-somos.html">MAKKoa Studio</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./Behind.html">Behind the scene</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hamburguesa" id="hamburguesa">&#9776;</div>
+    </header>
+
+    <main class="mainpolaroid">
+        <section class="tpolaroid"><article><h3>Polaroids Ilustradas</h3></article></section>
+        <section class="imggral"><article><img src="../multimedia/polaroid amarillo.jpg" alt="Polaroid-uno" class="polaroiduno"></article></section>
+        <section class="imgpolaroid">
+            <article>
+        <img src="../multimedia/polaroids dos.jpg" alt="Polaroid-dos" class="polaroiddos">
+        <img src="../multimedia/polaroids tres.jpg" alt="polaroid-tres" class="polaroiddos">
+        <img src="../multimedia/polaroids cuatro.jpg" alt="polaroid-cuatro" class="polaroiddos">
+            </article>
+        </section>
+        <section class="texpolaroid"><article><p>Este challenge nació como una forma de explorar el dibujo desde lo cotidiano. Usando el formato de una polaroid como lienzo, creé pequeñas ilustraciones que capturan momentos, escenas, personajes y detalles simples con un toque personal. Fue un ejercicio creativo para soltar la mano, jugar con estilos, experimentar técnicas y reconectar con lo que más disfruto: dibujar por el simple placer de hacerlo. Cada pieza es una mini historia ilustrada y juntas forman una colección íntima y espontánea del universo Makkoa.</p></article></section>
+    </main>
+
+    <footer>
+        <section class="derechos"><article><h4>Derechos Reservados</h4></article></section>
+        <section class="redes">
+            <article>
+                <a href="https://www.instagram.com/mak.koa/" target="_blank"><img src="../multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss"></a>
+                <a href="http://www.behance.net/makdg" target="_blank"><img src="../multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss"></a>
+                <a href="https://www.facebook.com/profile.php?id=61558771463068" target="_blank"><img src="../multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss"></a>
+            </article>
+        </section>
+    </footer>
+
+    <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    hamburguesa.addEventListener("click", () => {
+        menu.classList.toggle("activo");
+    });</script>
+        <script>
+    document.querySelectorAll('.navegacion a').forEach(link => {
+        link.addEventListener('touchstart', () => {
+            document.querySelectorAll('.navegacion a').forEach(a => a.classList.remove('activo'));
+            link.classList.add('activo');
+        });
+    });
+</script>
+<script>
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('touchstart', () => {
+            logo.classList.add('activo');
+            setTimeout(() => {
+                logo.classList.remove('activo');
+            }, 300); // duración del zoom
+        });
+    }
+</script>
+<script>
+    const botonesRRSS = document.querySelectorAll('.rrss');
+    botonesRRSS.forEach(boton => {
+        boton.addEventListener('touchstart', () => {
+            boton.classList.add('tocado');
+            setTimeout(() => {
+                boton.classList.remove('tocado');
+            }, 300);
+        });
+    });
+</script>
+</body>
+</html>

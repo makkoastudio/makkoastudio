@@ -1,0 +1,154 @@
+
+.mainflow{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    .proyecto{
+        margin: 4rem auto;
+        max-width: 1200px;
+        padding: 0 1rem;
+    }
+    .proyecto h3{
+        font-family: whitenice;
+        font-weight: 100;
+        font-size: 2.5rem;
+        color: #f7b95e;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .imgcap{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        margin-bottom: 1.5rem;
+    }
+    .imgcap img{
+        width: 100%;
+        max-width: wrap;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    .imgflow img{
+        width: 100%;
+        max-width: wrap;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+    .imgflow{
+        display: flex;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        padding: 2rem;
+    }
+    .tflow{
+        grid-area: tflow;
+        justify-items: start;
+        margin: 0 8rem;
+    }
+    .texflow{
+        font-family: mulish;
+        font-size: 1rem;
+        color: #333333;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    .tcap{
+        grid-area: tcap;
+        margin: 0 8rem;
+    }
+    .imgcap{
+        grid-area: imgcap;
+        justify-items: center;
+    }
+    .imgflow{
+        grid-area: imgflow;
+        justify-items: center;
+    }
+    .texcap{
+        font-family: mulish;
+        font-size: 1rem;
+        color: #333333;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    .flowers{
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .capitan{
+        height: 270px;
+        width: 270px;
+    }
+    .capitanilu{
+        height: 270px;
+        width: 270px;
+    }
+    .flowers, .capitan, .capitanilu{
+        width: 100%;
+        max-width: 270px;
+        height: 270px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    @include mobile{
+        main{
+            min-width: calc(100vh - 120px);
+        }
+        .proyecto{
+            margin: 0.5rem auto;
+        }
+        .mainflow{
+            display: block;
+            margin: 0 1rem;
+        }
+        .imgflow, .imgcap{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+        .imgflow img, .imgcap img{
+            width: 48%;
+            height: auto;
+            max-width: 100%;
+        }
+        .texflow, .texcap{
+            width: 100% !important;
+            height: auto !important;
+            max-width: 90vw;
+            margin: 1rem auto 0.5rem auto !important;
+            padding-bottom: 0 !important;
+            text-align: justify;
+        }
+        .texflow{
+            margin-bottom: 0.5rem !important;
+        }
+        .proyecto h3{
+            margin-top: 0 !important;
+            text-align: center;
+        }
+    }
+}

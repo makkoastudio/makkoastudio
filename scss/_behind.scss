@@ -1,0 +1,100 @@
+.mainpolaroid{
+    display: grid;
+    grid-template-areas: 
+    "tpolaroid tpolaroid tpolaroid"
+    "imggral imgpolaroid imgpolaroid"
+    "imggral texpolaroid texpolaroid"
+    ;
+    gap: 1rem;
+    .tpolaroid{
+        grid-area: tpolaroid;
+        margin: 2rem 5rem;
+        text-align: center;
+    }
+    .imggral{
+        grid-area: imggral;
+        justify-content: center;
+        margin: 20px 90px;
+    }
+    .imgpolaroid{
+        grid-area: imgpolaroid;
+        justify-content: center;
+        margin: 0 80px;
+    }
+    .texpolaroid{
+        grid-area: texpolaroid;
+        display: inline-block;
+        width: 45vw;
+        height: auto;
+        background-color: none;
+        margin: -50px 80px;
+        text-align: justify;
+    }
+    .polaroiduno{ 
+        height: 350px;
+        width: 350px;
+    }
+    .polaroiddos{
+        height: 200px;
+        width: 200px;
+    }
+    img{
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:active{
+            transform: scale(1.05);
+        }
+    }
+    @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 1rem;
+        .tpolaroid{
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .imggral{
+            margin: 1rem 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .imggral img{
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+        }
+        .imgpolaroid{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+            flex-wrap: flex;
+            overflow-x: auto;
+        }
+        .imgpolaroid img{
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+        .texpolaroid{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 1rem 0;
+            text-align: justify;
+            padding: 0 1rem;
+        }
+        .polaroiduno, .polaroiddos{
+            width: 100%;
+            max-width: 270px;
+            margin-bottom: 1rem;
+        }
+    }
+}

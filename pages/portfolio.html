@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portfolio de Makkoa Studio: ilustraciones, diseños personalizados y proyectos visuales únicos llenos de creatividad">
+    <meta name="keywords" content="Makkoa Studio, portfolio, ilustración, diseño gráfico, arquitectura, diseño personalizados, proyectos creativos, arte digital, stickers, flores, personajes, diseño Argentina">
+    <meta name="author" content=" Makkoa Studio">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Makkoa Stduio | Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><img src="../multimedia/makkoa firma.png" alt="Logo"  class="logo"></a>
+        <nav>
+            <ul class="navegacion" id="menu">
+                <li><a href="./quienes-somos.html">MAKKoa Studio</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./Behind.html">Behind the scene</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hamburguesa" id="hamburguesa">&#9776;</div>
+    </header>
+
+    <main class="mainflow">
+        <section class="proyecto">
+            <h3>Flowers Truck</h3>
+            <div class="imgflow">
+                <img src="../multimedia/01. FlowersTruck.jpg" alt="flowers-truck" class="flowers">
+                <img src="../multimedia/02. flowers hands.jpg" alt="conectando-colores" class="flowers">
+                <img src="../multimedia/03. momentos ready.jpg" alt="abrazando-momentos" class="flowers">
+                <img src="../multimedia/04. truck flowers.jpg" alt="en-la-ciudad" class="flowers">
+            </div>
+            <p class="texflow"> Una serie de ilustraciones que combinan lo delicado de las flores con el encanto de los espacios moviles. Este proyecto explora la conexión entre la naturaleza y el diseño, a través de trazos suaves y composiciones llenas de vida.</p>
+        </section>
+        <section class="proyecto">
+            <h3>Capitan</h3>
+            <div class="imgcap">
+                <img src="../multimedia/vidriera uno_Mesa de trabajo 1.jpg" alt="boceto" class="capitan">
+                <img src="../multimedia/vidriera dos_Mesa de trabajo 1.jpg" alt="vidriera-terminada" class="capitan">
+                <img src="../multimedia/sticker capitan_Mesa de trabajo 1.jpg" alt="stickers" class="capitan">
+                <img src="../multimedia/capitan_Mesa de trabajo 1.jpg" alt="ilustracion" class="capitanilu">
+            </div>
+            <p class="texcap">Un proyecto integral pensado para un gimnasio: desde la creación de un personaje estilo cómic con una estética pop, hasta stickers personalizados y el diseño de una vidrera ilustrada para su nueva sede. Una propuesta visual coherente, divertida y con mucha personalidad.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="derechos">
+            <h4>Derechos Reservados</h4>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/mak.koa/" target="_blank"><img src="../multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss"></a>
+            <a href="http://www.behance.net/makdg" target="_blank"><img src="../multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss"></a>
+            <a href="https://www.facebook.com/profile.php?id=61558771463068" target="_blank"><img src="../multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss"></a>
+        </div>
+    </footer>
+
+        <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    hamburguesa.addEventListener("click", () => {
+        menu.classList.toggle("activo");
+    });</script>
+        <script>
+    document.querySelectorAll('.navegacion a').forEach(link => {
+        link.addEventListener('touchstart', () => {
+            document.querySelectorAll('.navegacion a').forEach(a => a.classList.remove('activo'));
+            link.classList.add('activo');
+        });
+    });
+</script>
+<script>
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('touchstart', () => {
+            logo.classList.add('activo');
+            setTimeout(() => {
+                logo.classList.remove('activo');
+            }, 300); 
+        });
+    }
+</script>
+<script>
+    const botonesRRSS = document.querySelectorAll('.rrss');
+    botonesRRSS.forEach(boton => {
+        boton.addEventListener('touchstart', () => {
+            boton.classList.add('tocado');
+            setTimeout(() => {
+                boton.classList.remove('tocado');
+            }, 300);
+        });
+    });
+</script>
+</body>
+</html>

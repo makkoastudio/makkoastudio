@@ -1,0 +1,145 @@
+.studio{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 3rem 2rem;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+    .soy{
+        height: 20rem;
+        width: 20rem;
+    }
+    .textmak{
+        display: inline-block;
+        width: 30vw;
+        height: 30vh;
+        background-color: none;
+        margin:0 10px;
+        grid-area: textmak;
+        justify-items: center;
+        position: relative;
+        top: 50px;
+        padding: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333333;
+    }
+    .hola{
+        grid-area: hola;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .soy{
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:active{
+            transform: scale(1.05);
+        }
+    }
+    .hola img.activo{
+        transform: scale(1.05);
+    }
+    .contenido-principal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .left-column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 350px;
+    }
+    .left-column, .titulo-imagen{
+        margin: 0;
+    }
+    .left-column .soy{
+        max-width: 100%;
+        height: auto;
+        display: block;
+    } 
+    .right-column{
+        max-width: 500px;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+    .titulo{
+        grid-area: titulo;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #333333;
+    }
+    @include mobile{
+        .studio{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem 1rem;
+            justify-items: center;
+            text-align: center;
+        }
+        .studio{
+            display: block;
+            margin: 0 1rem;
+        }
+        .textmak{
+            width: 100% !important;
+            height: auto !important;
+            margin: 1rem 0 !important;
+        }
+        .titulo{
+            font-size: 2rem;
+            margin-bottom: 0 1rem;
+        }
+        .textmak{
+            width: 90vw;
+            height: auto;
+            padding: 1rem;
+            font-size: 0.95rem;
+            text-align: justify;
+            margin:0.5rem auto 0 auto;
+        }
+        .quees{
+            font-size: 1rem;
+            margin: 0 1rem;
+        }
+        .hola img{
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        .soy{
+            width: 90vw;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0.5rem auto 0 auto;
+        }
+        .contenido-principal{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 50px;
+        }
+        .right-column{
+            max-width: 100%;
+        }
+        .left-column{
+            max-width: 100%;
+        }
+    }
+}

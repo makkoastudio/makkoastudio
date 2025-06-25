@@ -1,0 +1,58 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ebe9e4;
+    flex-wrap: wrap;
+    margin-top: auto;
+
+    .derechos{
+        font-family: mulish;
+        color: #9b9998;
+        font-size: 15px;
+        margin: 0;
+    }
+    .redes{
+        display: flex;
+        gap: 15px;
+    }
+    .rrss{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    .rrss:hover{
+        transform: scale(1.1);
+    }
+    @keyframes zoomInMobile{
+        0%{transform: scale(1);}
+        50%{transform: scale(1.2);}
+        100%{transform: scale(1);}
+    }
+    @include mobile{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+        .derechos{
+            order: 2;
+            text-align: center;
+        }
+        .redes{
+            order: 1;
+            justify-content: center;
+        }
+        .rrss{
+            height: 30px;
+            width: 30px;
+            &:active{
+                transform: scale(1.1);
+            }
+            &.tocado{
+                animation: zoomInMobile 0.3s ease;
+            }
+        }
+    }
+}

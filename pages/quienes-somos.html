@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Conocé Makkoa Studio: quiénes somos, cómo trabajamos y qué nos inspira en el mundo del diseño, ilustración y redes sociales">
+    <meta name="keywords" content="Makkoa Studio, quiénes somos, estudio creativo, diseño gráfico, ilustración, redes sociales, identidad visual, arte digital, creatividad Argentina, arquitectura ">
+    <meta name="author" content="Makkoa Studio">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Makkoa Studio | Quiénes Somos y nuestra filosofía</title>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html"><img src="../multimedia/makkoa firma.png" alt="Logo" class="logo"></a>
+        <nav>
+            <ul class="navegacion" id="menu">
+                <li><a href="./quienes-somos.html">MAKKoa Studio</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./Behind.html">Behind the scene</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hamburguesa" id="hamburguesa">&#9776;</div>
+    </header>
+    <main class="studio">
+        <section class="contenido-principal">
+            <div>
+                <h3 class="titulo-imagen">¿Qué es Makkoa Studio?</h3>
+                <img src="../multimedia/quien soy feliz.jpg" alt="Quien-soy" class="soy">
+            </div>
+            <div class="right-column">
+                <p class="textmak">Makkoa Studio es un espacio creativo donde se fusionan el diseño gráfico, el diseño arquitectónico y la creación digital. Nacimos con la idea de transformar ideas en experiencias visuales con identidad, cuidando tanto lo estético como lo funcional. Desde ilustraciones hechas a mano hasta renders arquitectónicos intervenidos artísticamente, pasando por contenido vidual para redes y piezas digitales pensadas para conectar, en Makkoa combinamos creatividad, técnica y estrategia. Creemos en el poder del diseño para contar historias, emocionar y comunicar con intención. Ya sea en un papel, una pantalla o una fachada, buscamos generar un impacto auténtico y duradero a través de cada proyecto.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="derechos">
+            <h4>Derechos Reservados</h4>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/mak.koa/" target="_blank"><img src="../multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss"></a>
+            <a href="http://www.behance.net/makdg" target="_blank"><img src="../multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss"></a>
+            <a href="https://www.facebook.com/profile.php?id=61558771463068" target="_blank"><img src="../multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss"></a>
+        </div>
+    </footer>
+
+            <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    hamburguesa.addEventListener("click", () => {
+        menu.classList.toggle("activo");
+    });</script>
+        <script>
+    document.querySelectorAll('.navegacion a').forEach(link => {
+        link.addEventListener('touchstart', () => {
+            document.querySelectorAll('.navegacion a').forEach(a => a.classList.remove('activo'));
+            link.classList.add('activo');
+        });
+    });
+</script>
+<script>
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('touchstart', () => {
+            logo.classList.add('activo');
+            setTimeout(() => {
+                logo.classList.remove('activo');
+            }, 300); // duración del zoom
+        });
+    }
+</script>
+<script>
+    const botonesRRSS = document.querySelectorAll('.rrss');
+    botonesRRSS.forEach(boton => {
+        boton.addEventListener('touchstart', () => {
+            boton.classList.add('tocado');
+            setTimeout(() => {
+                boton.classList.remove('tocado');
+            }, 300);
+        });
+    });
+</script>
+<script>
+    const holaImg = document.querySelector('.soy');
+    if (holaImg) {
+        holaImg.addEventListener('touchstart', () => {
+        holaImg.classList.add('activo');
+        setTimeout(() => {
+            holaImg.classList.remove('activo');
+        }, 300);  
+        });
+    }
+</script>
+</body>
+</html>

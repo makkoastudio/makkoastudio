@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Makkoa Studio: Ilustracion, diseño gráfico, arquitectura y gestión de redes sociales. Conectá ideas creativas visual y estrategia digital">
+    <meta name="keywords" content="Makkoa Studio, diseño gráfico, ilustración, arquitectura, community manager, redes sociales, arte digital, creatividad visual, diseño Argentina">
+    <meta name="author" content="Makkoa Studio">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Makkoa Studio | Diseño, ilustración y Redes sociales</title>
+</head>
+
+<body>
+    <header class="header-index">
+        <div class="top-row">
+            <div class="logo-texto"><h1 class="crear" data-text="Crear para conectar">Crear para conectar</h1></div>
+            <div class="hamburguesa" id="hamburguesa">☰</div>
+        </div>
+        <nav class="navegacion" id="menu">
+            <ul>
+                <li><a href="./pages/quienes-somos.html">MAKKoa Studio</a></li>
+                <li><a href="./pages/portfolio.html">Portfolio</a></li>
+                <li><a href="./pages/Behind.html">Behind the scene</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a href="./index.html" class="gifgif"><img src="./multimedia/gif makkoa.gif" alt="Logo" class="gif"></a>
+        <div class="carrusel-container">
+            <div class="carrusel-track">
+                <img class="carrusel-slide" src="./multimedia/uno_Mesa de trabajo 1.jpg" alt="Imagen 1">
+                <img class="carrusel-slide" src="./multimedia/dos_Mesa de trabajo 1.jpg" alt="Imagen 2">
+                <img class="carrusel-slide" src="./multimedia/tres_Mesa de trabajo 1.jpg" alt="Imagen 3">
+                <img class="carrusel-slide" src="./multimedia/cuatro_Mesa de trabajo 1.jpg" alt="Imagen 4">
+            </div>
+            <button class="prev">&#10094</button>
+            <button class="next">&#10095</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="derechos">
+                <h4>Derechos Reservados</h4>
+        </div>
+        <div class="redes"> 
+                <a href="https://www.instagram.com/mak.koa/" target="_blank"><img src="./multimedia/instagram_Mesa de trabajo 1.png" alt="Instagram" class="rrss"></a>
+                <a href="http://www.behance.net/makdg" target="_blank"><img src="./multimedia/behance_Mesa de trabajo 1.png" alt="Behance" class="rrss"></a>
+                <a href="https://www.facebook.com/profile.php?id=61558771463068" target="_blank"><img src="./multimedia/facebook_Mesa de trabajo 1.png" alt="Facebook" class="rrss"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+    crossorigin="anonymous"></script>
+
+        <script>
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
+
+    hamburguesa.addEventListener("click", () => {
+        menu.classList.toggle("activo");
+    });</script>
+
+    <script>
+        const slides = document.querySelectorAll('.carrusel-slide');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        document.querySelector('.next').addEventListener('click', nextSlide);
+        document.querySelector('.prev').addEventListener('click', prevSlide);
+
+        showSlide(currentIndex);
+        setInterval(nextSlide, 5000)
+    </script>
+<script>
+    document.querySelectorAll('.navegacion a').forEach(link => {
+        link.addEventListener('touchstart', () => {
+            document.querySelectorAll('.navegacion a').forEach(a => a.classList.remove('activo'));
+            link.classList.add('activo');
+        });
+    });
+</script>
+<script>
+    const botonesRRSS = document.querySelectorAll('.rrss');
+    botonesRRSS.forEach(boton => {
+        boton.addEventListener('touchstart', () => {
+            boton.classList.add('tocado');
+            setTimeout(() => {
+                boton.classList.remove('tocado');
+            }, 300);
+        });
+    });
+</script>
+</body>
+</html>

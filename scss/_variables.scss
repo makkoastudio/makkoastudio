@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+
+@font-face {
+    font-family: whitenice;
+    src: url(../font/Whitenice.ttf);
+}
+
+@font-face {
+    font-family: mulish;
+    src: url(../font/Mulish-VariableFont_wght.ttf);
+} 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+.home{
+    color: #333333;
+    font-size: 30px;
+    font-weight: 500;
+}
+body{
+    background-color: #ebe9ea !important;
+}
+p{
+    font-size: 15px;
+    font-family: mulish;
+    color: #333333;
+    text-align: justify;
+}
+h2{
+    color: #f7b95e;
+    font-size: 20px;
+    font-weight: 5000;
+    text-transform: uppercase;
+    font-family: mulish;
+    position: relative;
+    top: 30px;
+    margin: 0 2rem;
+}
+
+h3{
+    color: #333333;
+    font-size: 35px;
+    font-family: whitenice;
+    font-weight: 100;
+}
+
+h4{
+    color: #9b9998;
+    font-family: mulish;
+    font-size: 15px;
+}
+
+li{
+    list-style: none;
+    font-size: 15px;
+    color: #9b9998;
+    font-family: mulish;
+}
+
+@mixin mobile{
+    @media (max-width: 430px){
+        @content;
+    }
+}
