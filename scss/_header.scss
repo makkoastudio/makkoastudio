@@ -93,12 +93,16 @@ header{
             margin-top: 10px;
         }
         .navegacion li{
-            margin: 1rem 0;
-            margin-left: 0;
-            margin-bottom: 10px;
+            width: 100%;
+            text-align: left;
         }
         .hamburguesa{
             display: block;
+            position: relative;
+            top: 0;
+            right: 0;
+            align-self: flex-end;
+            margin: 10px 20px;
         }
         .navegacion.activo{
             display: flex;
