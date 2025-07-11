@@ -62,9 +62,7 @@ main{
         width: 100%;
     }
         @include mobile{
-        main{
             min-height: calc(100vh - 100px);
-        }
         .gif{
             width: 100%;
             height: auto;

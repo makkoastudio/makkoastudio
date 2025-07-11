@@ -11,6 +11,8 @@
         color: #9b9998;
         font-family: mulish;
         @include mobile{
+            flex-direction: column;
+            align-items: flex-start;
             padding: 2px;
         }
     }
@@ -96,21 +98,20 @@
         }
     }
     @include mobile{
-        .header-index{
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             width: 100%;
             box-sizing: border-box;
-            }
         .hamburguesa{
             display: block;
         }
         .navegacion{
+            display: none;
             flex-direction: column;
             align-items: flex-start;
+            width: 100%;
             margin: 0.1rem 0;
-            display: none;
             margin-top: 10px;
         }
         .navegacion li{

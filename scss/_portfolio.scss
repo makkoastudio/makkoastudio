@@ -113,14 +113,13 @@
     }
 
     @include mobile{
-        main{
-            min-width: calc(100vh - 120px);
-        }
         .proyecto{
             margin: 0.5rem auto;
         }
         .mainflow{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
             margin: 0 1rem;
         }
         .imgflow, .imgcap{
