@@ -11,15 +11,7 @@
         width: 20rem;
     }
     .textmak{
-        display: inline-block;
         width: 30vw;
-        height: 30vh;
-        background-color: none;
-        margin:0 10px;
-        grid-area: textmak;
-        justify-items: center;
-        position: relative;
-        top: 50px;
         padding: 1.5rem;
         font-size: 1rem;
         line-height: 1.6;
@@ -50,25 +42,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 100px;
-        padding: 20px;
-        max-width: 1000px;
+        gap: 4rem;
+        padding: 2rem;
+        max-width: 1200px;
         margin: 0 auto;
     }
     .left-column{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        text-align: center;
         gap: 20px;
         width: 350px;
     }
     .left-column, .titulo-imagen{
-        margin: 0;
+        flex: 1;
     }
     .left-column .soy{
         max-width: 100%;
         height: auto;
         display: block;
+        margin-top: 1.5rem;
     } 
     .right-column{
         max-width: 500px;
@@ -77,11 +71,12 @@
         text-align: left;
     }
     .titulo{
-        grid-area: titulo;
         font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
-        color: #333333;
+        color:#f7b95e;
+        margin-bottom: 2rem;
+        margin: 0;
     }
     @include mobile{
         .studio {
