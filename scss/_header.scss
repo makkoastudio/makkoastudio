@@ -17,15 +17,13 @@ header{
     .logo{
         height: 60px;
         width: auto;
-        transition: transform 0.3s ease background-color 0.3s ease;
+        transition: transform 0.3s ease;
         &:hover{
             transform: scale(1.1);
-            background-color: #f7b95e;
-            border-radius: 10px;
+            content: url(../multimedia/35.png);
         }
         &.activo{
             transform: scale(1.15);
-            background-color: #f7b95e;
         }
     }
     .navegacion{
@@ -47,17 +45,13 @@ header{
         top: 10px;
         transition: all 0.3s ease;
         &:hover{
-            background-color: #f7b95e;
-            color: white;
+            color:#f7b95e;
             font-weight: bold;
-            border-radius: 5px;
         }
         &.activo,
         &:active{
-            background-color: #f7b95e;
-            color: white;
+            color: #f7b95e;
             font-weight: bold;
-            border-radius: 5px;
         }
     }
 

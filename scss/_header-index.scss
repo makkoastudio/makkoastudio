@@ -10,11 +10,6 @@
         font-size: 15px;
         color: #9b9998;
         font-family: mulish;
-        @include mobile{
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 2px;
-        }
     }
     .crear{
         color: transparent;
@@ -61,15 +56,12 @@
     }
     .navegacion{
         display: flex;
+        flex-direction: row;
         justify-content: flex-end;
         gap: 5rem;
         margin: 0;
         padding: 0;
         width: auto;
-    }
-    .navegacion li{
-        margin: 0;
-        padding: 0;
     }
     .navegacion a{
         color: #9b9998;
