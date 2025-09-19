@@ -12,10 +12,10 @@
         padding: 0 1rem;
     }
     .proyecto h3{
-        font-family: whitenice;
+        font-family: mulish;
         font-weight: 100;
         font-size: 2.5rem;
-        color: #f7b95e;
+        color: #333333;
         margin-bottom: 1.5rem;
         text-align: center;
     }
@@ -110,6 +110,29 @@
         &:hover{
             transform: scale(1.1);
         }
+    }
+    .sticker{
+        width: 100%;
+        max-width: 270px;
+        height: 270px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .stickersuno{
+        height: 270px;
+        width: 270px;
+    }
+    .stickersuno{
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
 
     @include mobile{

@@ -38,6 +38,18 @@
         height: 200px;
         width: 200px;
     }
+    .imgstciker{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        justify-items: center;
+        margin-bottom: 1.5rem;
+    }
+    .sticker{
+        width: 270px;
+        height: 270px;
+    } 
+    
     img{
         transition: transform 0.3s ease;
         cursor: pointer;

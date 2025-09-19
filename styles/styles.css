@@ -53,10 +53,10 @@ h2 {
 }
 
 h3 {
-  color: #333333;
+  color: #f7b95e;
   font-size: 35px;
   font-family: whitenice;
-  font-weight: 100;
+  font-weight: 50;
 }
 
 h4 {
@@ -329,15 +329,7 @@ header .hamburguesa {
   width: 20rem;
 }
 .studio .textmak {
-  display: inline-block;
   width: 30vw;
-  height: 30vh;
-  background-color: none;
-  margin: 0 10px;
-  grid-area: textmak;
-  justify-items: center;
-  position: relative;
-  top: 50px;
   padding: 1.5rem;
   font-size: 1rem;
   line-height: 1.6;
@@ -368,25 +360,27 @@ header .hamburguesa {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
-  padding: 20px;
-  max-width: 1000px;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .studio .left-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: center;
   gap: 20px;
   width: 350px;
 }
 .studio .left-column, .studio .titulo-imagen {
-  margin: 0;
+  flex: 1;
 }
 .studio .left-column .soy {
   max-width: 100%;
   height: auto;
   display: block;
+  margin-top: 1.5rem;
 }
 .studio .right-column {
   max-width: 500px;
@@ -395,11 +389,12 @@ header .hamburguesa {
   text-align: left;
 }
 .studio .titulo {
-  grid-area: titulo;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-  color: #333333;
+  color: #f7b95e;
+  margin-bottom: 2rem;
+  margin: 0;
 }
 @media (max-width: 768px) {
   .studio .studio {
@@ -460,6 +455,26 @@ header .hamburguesa {
   .studio .left-column {
     max-width: 100%;
   }
+  .studio .titulo-servicios {
+    font-size: 1.6rem;
+  }
+  .studio .servicios {
+    padding: 1rem;
+  }
+}
+
+.servicios {
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-servicios {
+  font-size: 2rem;
+  color: #f7b95e;
+  margin-bottom: 2rem;
 }
 
 .mainflow {

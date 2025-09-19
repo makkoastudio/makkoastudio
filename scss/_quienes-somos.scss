@@ -9,6 +9,7 @@
     .soy{
         height: 20rem;
         width: 20rem;
+        margin-top: 1.5rem;
     }
     .textmak{
         width: 30vw;
@@ -50,6 +51,7 @@
     .left-column{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: flex-start;
         text-align: center;
         gap: 20px;
@@ -78,6 +80,7 @@
         margin-bottom: 2rem;
         margin: 0;
     }
+
     @include mobile{
         .studio {
             display: flex;
@@ -137,5 +140,23 @@
         .left-column{
             max-width: 100%;
         }
+        .titulo-servicios{
+            font-size: 1.6rem;
+        }
+        .servicios{
+            padding: 1rem;
+        }
     }
 }
+    .servicios{
+        padding: 4rem 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .titulo-servicios{
+        font-size: 2rem;
+        color: #f7b95e;
+        margin-bottom: 2rem;
+    }
