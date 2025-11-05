@@ -46,16 +46,16 @@ h2 {
   font-size: 20px;
   font-weight: 5000;
   text-transform: uppercase;
-  font-family: mulish;
+  font-family: whitenice;
   position: relative;
   top: 30px;
   margin: 0 2rem;
 }
 
 h3 {
-  color: #f7b95e;
+  color: #333333;
   font-size: 35px;
-  font-family: whitenice;
+  font-family: mulish;
   font-weight: 50;
 }
 
@@ -327,6 +327,7 @@ header .hamburguesa {
 .studio .soy {
   height: 20rem;
   width: 20rem;
+  margin-top: 1.5rem;
 }
 .studio .textmak {
   width: 30vw;
@@ -368,6 +369,7 @@ header .hamburguesa {
 .studio .left-column {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   text-align: center;
   gap: 20px;
@@ -491,10 +493,10 @@ header .hamburguesa {
   padding: 0 1rem;
 }
 .mainflow .proyecto h3 {
-  font-family: whitenice;
+  font-family: mulish;
   font-weight: 100;
   font-size: 2.5rem;
-  color: #f7b95e;
+  color: #333333;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -589,6 +591,29 @@ header .hamburguesa {
 }
 .mainflow .flowers:hover, .mainflow .capitan:hover, .mainflow .capitanilu:hover {
   transform: scale(1.1);
+}
+.mainflow .sticker {
+  width: 100%;
+  max-width: 270px;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.mainflow .sticker:hover {
+  transform: scale(1.1);
+}
+.mainflow .stickersuno {
+  height: 270px;
+  width: 270px;
+}
+.mainflow .stickersuno {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
   .mainflow .proyecto {
@@ -697,40 +722,69 @@ footer .rrss:hover {
 
 .mainpolaroid {
   display: grid;
-  grid-template-areas: "tpolaroid tpolaroid tpolaroid" "imggral imgpolaroid imgpolaroid" "imggral texpolaroid texpolaroid";
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-areas: "tpolaroid tpolaroid" "imggral textpolaroid" "imgpolaroid textpolaroid";
   gap: 1rem;
 }
 .mainpolaroid .tpolaroid {
   grid-area: tpolaroid;
-  margin: 2rem 5rem;
+  margin: 2rem auto 1rem;
   text-align: center;
+  max-width: 1100px;
+  width: 100%;
 }
 .mainpolaroid .imggral {
   grid-area: imggral;
-  justify-content: center;
-  margin: 20px 90px;
+  margin: 0;
+  display: grid;
 }
 .mainpolaroid .imgpolaroid {
   grid-area: imgpolaroid;
-  justify-content: center;
-  margin: 0 80px;
+  margin: 0;
+}
+.mainpolaroid .imgpolaroid .thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 640px;
 }
 .mainpolaroid .texpolaroid {
   grid-area: texpolaroid;
-  display: inline-block;
-  width: 45vw;
-  height: auto;
-  background-color: none;
-  margin: -50px 80px;
+  display: block;
+  width: auto;
+  margin: 0;
+  background-color: transparent;
+  max-width: 640px;
+  line-height: 1.6;
   text-align: justify;
 }
 .mainpolaroid .polaroiduno {
-  height: 350px;
-  width: 350px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 4/3;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  justify-self: start;
 }
 .mainpolaroid .polaroiddos {
-  height: 200px;
-  width: 200px;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4/3;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.mainpolaroid .imgstciker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  margin-bottom: 1.5rem;
+}
+.mainpolaroid .sticker {
+  width: 270px;
+  height: 270px;
 }
 .mainpolaroid img {
   transition: transform 0.3s ease;
@@ -768,10 +822,18 @@ footer .rrss:hover {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    justify-content: center;
     margin-bottom: 1rem;
-    flex-wrap: flex;
+    flex-wrap: wrap;
     overflow-x: auto;
+  }
+  .mainpolaroid .imgpolaroid .polaroiddos {
+    max-width: 200px;
+  }
+  .mainpolaroid .imgpolaroid .thumbs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 350px;
   }
   .mainpolaroid .imgpolaroid img {
     width: 100%;
@@ -779,18 +841,19 @@ footer .rrss:hover {
     height: auto;
   }
   .mainpolaroid .texpolaroid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     width: 100%;
-    margin: 1rem 0;
+    margin: 0 0 1rem 0;
     text-align: justify;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    max-width: 720px;
   }
   .mainpolaroid .polaroiduno, .mainpolaroid .polaroiddos {
     width: 100%;
-    max-width: 270px;
+    max-width: 320px;
     margin-bottom: 1rem;
+    aspect-ratio: 4/3;
+    object-fit: cover;
   }
 }
 
