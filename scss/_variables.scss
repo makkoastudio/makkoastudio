@@ -76,6 +76,9 @@ li{
     color: #9b9998;
     font-family: mulish;
 }
+footer{
+    background-color: transparent;
+}
 
 @mixin mobile{
     @media (max-width: 768px){
